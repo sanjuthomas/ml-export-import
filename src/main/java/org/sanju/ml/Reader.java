@@ -11,7 +11,7 @@ import java.util.Map;
 public abstract class Reader<T> {
 
 	protected static final int PAGE_SIZE = 10;
-	protected int PAGE_INDEX = 1;
+	protected int START = 1;
 
 	/**
 	 * Return a page from the given collection on every call.

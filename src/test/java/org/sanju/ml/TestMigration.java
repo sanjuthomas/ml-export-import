@@ -46,4 +46,20 @@ public class TestMigration extends AbstractTest{
 		Assert.assertEquals(0, deleted.getPageSize());
 	}
 
+	@Test
+	public void shouldRead(){
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+		System.out.println(this.jsonReader.nextPage());
+
+	}
+
 }

@@ -43,15 +43,15 @@ public class JSONReader extends Reader<JsonNode>{
 	 */
 	@Override
 	public Map<String, JsonNode> nextPage(){
-		final Map<String, JsonNode> nodeMap = new LinkedHashMap<String, JsonNode>(PAGE_SIZE);
-		if((this.PAGE_INDEX == 1) || this.documentPage.hasNextPage()){
-			this.documentPage = this.jsonDocumentManager.search(this.sqd, PAGE_SIZE * this.PAGE_INDEX);
+		final Map<String, JsonNode> nodeMap = new LinkedHashMap<>(PAGE_SIZE);
+		if((this.START == 1) || this.documentPage.hasNextPage()){
+			this.documentPage = this.jsonDocumentManager.search(this.sqd, this.START);
 			for (final DocumentRecord document : this.documentPage) {
 				final JacksonHandle handle = new JacksonHandle();
 				document.getContent(handle);
 				nodeMap.put(document.getUri(), handle.get());
 			}
-			this.PAGE_INDEX += 1;
+			this.START  += this.documentPage.getPageSize();
 		}
 		return nodeMap;
 	}
