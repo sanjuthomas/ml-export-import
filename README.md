@@ -1,5 +1,5 @@
 # ml-export-import
-Import data from given a collection of a given MarkLogic database to another MarkLogic database in same server or another server.
+Import data from a given collection of a given MarkLogic database to another MarkLogic database in same server or another server.
 
 #How to configure against your source and target server?
 Update the src/main/resources/server.properties file to point to write server. 
