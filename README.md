@@ -1,5 +1,5 @@
 # ml-export-import
-A java utility to load data page by page from a given collection of a given MarkLogic database to another MarkLogic database in the same server or another server.
+A java utility to load data page by page from a given collection of a given MarkLogic database to another MarkLogic database in the same server or another server. This utitly is written load small dataset from dev/uat server to developer machine.  
 
 #How to configure against your source and target server?
 Update the src/main/resources/server.properties file to point to your server. 
